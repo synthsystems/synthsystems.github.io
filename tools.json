@@ -110,6 +110,86 @@
       "url": "https://artificialanalysis.ai/leaderboards/models",
       "video": "Claude vs ChatGPT: the honest answer",
       "added": "2026-11-09"
+    },
+    {
+      "n": 12,
+      "name": "Claude vs Gemini (Nov 2026)",
+      "kind": "news",
+      "job": "Comparison",
+      "what": "Hard questions: Gemini 4 Carbon 59 vs Claude Opus 5.5 58. Coding agents: Claude Code 62 vs Gemini 59. Carbon is not public yet; Gemini 4 Argon, available today, scores 50. Data: Artificial Analysis, Nov 3 2026.",
+      "url": "https://artificialanalysis.ai/leaderboards/models",
+      "video": "Gemini passed Claude. But there's a catch.",
+      "added": "2026-11-10"
+    },
+    {
+      "n": 13,
+      "name": "Is a $20 AI plan worth it?",
+      "kind": "news",
+      "job": "Pricing",
+      "what": "ChatGPT Plus $20, Claude Pro $20 ($17/mo yearly), Google AI Pro $19.99. Paying unlocks the top model (GPT-6 Astra, Claude Opus, Gemini 4 Argon), higher limits, research and coding agents. Prices checked Nov 3 2026.",
+      "url": "https://claude.com/pricing",
+      "video": "$20 a month for AI? Here's what you get.",
+      "added": "2026-11-11"
+    },
+    {
+      "n": 14,
+      "name": "Best AI for students",
+      "kind": "news",
+      "job": "Students",
+      "what": "Gemini: free upgraded plan for 1 year for verified students. ChatGPT: study mode with step-by-step hints. Claude: learning mode that asks questions like a tutor.",
+      "url": "https://gemini.google/students/",
+      "video": "The best AI for students might not be yours.",
+      "added": "2026-11-12"
+    },
+    {
+      "n": 15,
+      "name": "Voyager",
+      "kind": "extension",
+      "job": "Chat organizer",
+      "what": "Folders, a timeline and export for ChatGPT, Claude, Gemini, AI Studio, DeepSeek and Kimi. Free, open source (GPL-3.0).",
+      "url": "https://github.com/voyager-crew/voyager",
+      "video": "Your AI chats are a mess. This fixes it.",
+      "added": "2026-11-13"
+    },
+    {
+      "n": 16,
+      "name": "Taste Skill",
+      "kind": "repo",
+      "job": "Web design skill",
+      "what": "Gives Claude Code or Codex an art direction, real photos from open archives and a real-browser check, so AI-built sites stop looking the same. MIT. A build takes 30-45 min and many tokens.",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "video": "Why every AI-built site looks the same.",
+      "added": "2026-11-14"
+    },
+    {
+      "n": 17,
+      "name": "Nanobrowser",
+      "kind": "extension",
+      "job": "Browser agent",
+      "what": "Free, open-source AI agent in your own browser: reads pages, clicks, types, switches tabs; asks before submitting and hands passwords and payments to you. Bring your own AI key or a local model.",
+      "url": "https://github.com/nanobrowser/nanobrowser",
+      "video": "An AI that uses your browser for you.",
+      "added": "2026-11-15"
+    },
+    {
+      "n": 18,
+      "name": "DESIGN.md Extractor",
+      "kind": "extension",
+      "job": "Design to AI",
+      "what": "Chrome extension that reads a site's fonts, colors and spacing and writes a DESIGN.md or SKILL.md for Claude Code, Codex or Google Stitch. MIT. Use for inspiration, not to clone brands.",
+      "url": "https://github.com/bergside/design-md-chrome",
+      "video": "Copy any site's style into your AI.",
+      "added": "2026-11-16"
+    },
+    {
+      "n": 19,
+      "name": "BrowserSkill",
+      "kind": "extension",
+      "job": "Agent + browser",
+      "what": "From Tencent: connects Claude Code, Codex or Cursor to your real Chrome or Edge with your logins, in its own window you can take over. Export tables as JSON/CSV. MIT.",
+      "url": "https://github.com/Tencent/BrowserSkill",
+      "video": "Your coding agent can use your real browser.",
+      "added": "2026-11-17"
     }
   ]
 }
