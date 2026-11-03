@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Synth Systems · Tools from our videos</title>
+  <meta name="description" content="Every AI tool, GitHub repo and extension from Synth Systems Shorts, numbered. Type the number from the video and open the link.">
+  <meta name="theme-color" content="#1E1B4B">
+  <link rel="icon" type="image/png" href="avatar.png">
+  <meta property="og:title" content="Synth Systems · Tools from our videos">
+  <meta property="og:description" content="Type the number from the Short and open the tool.">
+  <meta property="og:image" content="avatar.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="./" aria-label="Synth Systems, tools page">
+      <svg class="mark" viewBox="0 0 106 98" aria-hidden="true">
+        <rect x="0" y="39" width="8" height="20" rx="4" fill="#818CF8"/><!-- taste-skill-ignore: brand logo colour -->
+        <rect x="15" y="26.5" width="8" height="45" rx="4" fill="#22D3EE"/>
+        <rect x="30" y="14" width="8" height="70" rx="4" fill="#22D3EE"/>
+        <rect x="45" y="4" width="8" height="90" rx="4" fill="#22D3EE"/>
+        <rect x="60" y="14" width="8" height="70" rx="4" fill="#22D3EE"/>
+        <rect x="75" y="26.5" width="8" height="45" rx="4" fill="#22D3EE"/>
+        <rect x="90" y="39" width="8" height="20" rx="4" fill="#818CF8"/><!-- taste-skill-ignore: brand logo colour -->
+      </svg>
+      <span class="wordmark">synth <span>systems</span></span>
+    </a>
+    <nav class="social" aria-label="Channels">
+      <a href="https://www.youtube.com/@synthsystems" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/synthsystems/" rel="noopener">Instagram</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="title-row">
+      <h1>tools from our videos</h1>
+      <p class="sub">Type the number you saw in the Short, then tap Open.</p>
+    </div>
+
+    <form class="lookup" role="search" onsubmit="return false">
+      <label for="q">Tool number or name</label>
+      <div class="field">
+        <span class="hash" aria-hidden="true">#</span>
+        <input id="q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="4 or zapier">
+      </div>
+      <p class="answer" id="answer" aria-live="polite"></p>
+    </form>
+
+    <div class="toolbar">
+      <div class="tabs" role="tablist" aria-label="Kind of tool" id="tabs"></div>
+      <p class="count" id="count"></p>
+    </div>
+
+    <table class="list" id="list">
+      <thead>
+        <tr>
+          <th scope="col" class="c-n">No.</th>
+          <th scope="col" class="c-tool">Tool</th>
+          <th scope="col" class="c-job">For</th>
+          <th scope="col" class="c-added">Added</th>
+          <th scope="col" class="c-open"><span class="sr">Link</span></th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+    <noscript>
+      <p class="sub">This list needs JavaScript. The raw list is in <a href="tools.json">tools.json</a>.</p>
+    </noscript>
+  </main>
+
+  <footer class="foot">
+    <p>Synth Systems. One AI tool, repo or extension a day, in 40 seconds.</p>
+    <p id="updated"></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

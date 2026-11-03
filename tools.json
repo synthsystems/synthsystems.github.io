@@ -1,0 +1,55 @@
+{
+  "updated": "2026-11-03",
+  "tools": [
+    {
+      "n": 1,
+      "name": "Granola",
+      "kind": "app",
+      "job": "Meeting notes",
+      "what": "Turns your rough notes and the call transcript into clean notes. No bot joins the call.",
+      "url": "https://www.granola.ai",
+      "video": "5 AI tools that give you back 10 hours a week",
+      "added": "2026-11-03"
+    },
+    {
+      "n": 2,
+      "name": "Superhuman",
+      "kind": "app",
+      "job": "Email",
+      "what": "Splits your inbox so important mail comes first and drafts replies in your tone.",
+      "url": "https://superhuman.com",
+      "video": "5 AI tools that give you back 10 hours a week",
+      "added": "2026-11-03"
+    },
+    {
+      "n": 3,
+      "name": "Reclaim",
+      "kind": "app",
+      "job": "Calendar",
+      "what": "Books focus time and habits on your calendar and moves them when meetings land.",
+      "url": "https://reclaim.ai",
+      "video": "5 AI tools that give you back 10 hours a week",
+      "added": "2026-11-03"
+    },
+    {
+      "n": 4,
+      "name": "Zapier",
+      "kind": "app",
+      "job": "Automation",
+      "what": "Describe a workflow in plain English and its AI builds and runs the automation.",
+      "url": "https://zapier.com",
+      "video": "5 AI tools that give you back 10 hours a week",
+      "added": "2026-11-03"
+    },
+    {
+      "n": 5,
+      "name": "Gamma",
+      "kind": "app",
+      "job": "Slides",
+      "what": "Turns a prompt or rough notes into a designed slide deck in about a minute.",
+      "url": "https://gamma.app",
+      "video": "5 AI tools that give you back 10 hours a week",
+      "added": "2026-11-03"
+    }
+  ]
+}
