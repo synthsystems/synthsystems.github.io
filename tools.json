@@ -100,6 +100,16 @@
       "url": "https://github.com/tang1693/KIKUmap",
       "video": "Too many AI chats open? Map them.",
       "added": "2026-11-08"
+    },
+    {
+      "n": 11,
+      "name": "Claude vs ChatGPT (Nov 2026)",
+      "kind": "news",
+      "job": "Comparison",
+      "what": "Coding: Claude Code 62 vs Codex 55. Budget: GPT-6.1 Sol scores 55 at $1.27 per task vs Claude Opus 5.5 at 58 and $10.04. Hard questions: 58 vs 57, a tie. Data from Artificial Analysis, Nov 3 2026.",
+      "url": "https://artificialanalysis.ai/leaderboards/models",
+      "video": "Claude vs ChatGPT: the honest answer",
+      "added": "2026-11-09"
     }
   ]
 }
