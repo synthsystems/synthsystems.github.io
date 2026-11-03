@@ -50,6 +50,56 @@
       "url": "https://gamma.app",
       "video": "5 AI tools that give you back 10 hours a week",
       "added": "2026-11-03"
+    },
+    {
+      "n": 6,
+      "name": "claude-mem",
+      "kind": "repo",
+      "job": "Memory for Claude Code",
+      "what": "Records what Claude Code does, compresses it into short notes and loads them into your next session. Open source (Apache-2.0). Install: npx claude-mem install",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "video": "Claude Code forgets everything. This fixes that.",
+      "added": "2026-11-04"
+    },
+    {
+      "n": 7,
+      "name": "Mika",
+      "kind": "repo",
+      "job": "Phone agent",
+      "what": "An AI agent for Android that works your apps and the web on a hidden screen while you keep using your phone. Free, Apache-2.0. Needs Android 11+ and your own AI model key.",
+      "url": "https://github.com/wangzan101/Mika",
+      "video": "Your phone can now use its own apps",
+      "added": "2026-11-05"
+    },
+    {
+      "n": 8,
+      "name": "Floorplan",
+      "kind": "repo",
+      "job": "Code map",
+      "what": "A Claude Code and Codex plugin that draws a plain-English map of your codebase and runs a health check (keys in code, open tables, risky endpoints). MIT.",
+      "url": "https://github.com/haydenschmitty/floorplan",
+      "video": "AI built your app. Now see how it works.",
+      "added": "2026-11-06"
+    },
+    {
+      "n": 9,
+      "name": "Subvocal",
+      "kind": "news",
+      "job": "Silent-speech glasses",
+      "what": "YC startup building glasses that turn silently mouthed words into text using radio waves and an AI model. Prototype; the team plans to ship in Q1 2027. Source: their Show HN post.",
+      "url": "https://news.ycombinator.com/item?id=50340088",
+      "video": "These glasses let you type without a sound",
+      "added": "2026-11-07"
+    },
+    {
+      "n": 10,
+      "name": "Kikumap",
+      "kind": "app",
+      "job": "Chat organizer",
+      "what": "A free, open-source Mac menu-bar app that shows which Claude and ChatGPT chats are running, done or waiting, and lays them out as a mind map. Unofficial; macOS 13+.",
+      "url": "https://github.com/tang1693/KIKUmap",
+      "video": "Too many AI chats open? Map them.",
+      "added": "2026-11-08"
     }
   ]
 }

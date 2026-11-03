@@ -1,12 +1,16 @@
 (() => {
   const KINDS = [
-    { id: "all", label: "All", plural: "tools" },
-    { id: "app", label: "Apps", plural: "apps" },
-    { id: "repo", label: "Repos", plural: "repos" },
-    { id: "extension", label: "Extensions", plural: "extensions" },
+    { id: "all", label: "All", plural: "items", one: "item" },
+    { id: "app", label: "Apps", plural: "apps", one: "app" },
+    { id: "repo", label: "Repos", plural: "repos", one: "repo" },
+    { id: "extension", label: "Extensions", plural: "extensions", one: "extension" },
+    { id: "news", label: "News", plural: "news items", one: "news item" },
   ];
   const $ = (id) => document.getElementById(id);
   const pad = (n) => String(n).padStart(2, "0");
+  // Entries are added ahead of time; each one shows from its video's publish date (viewer's local day).
+  const now = new Date();
+  const today = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
   let tools = [];
   let kind = "all";
 
@@ -21,7 +25,8 @@
   }
 
   function rowHtml(t, hit) {
-    const kindLabel = KINDS.find((k) => k.id === t.kind)?.label.replace(/s$/, "") ?? t.kind;
+    const k = KINDS.find((x) => x.id === t.kind);
+    const kindLabel = k ? k.one.replace(/^./, (c) => c.toUpperCase()) : t.kind;
     return `<tr id="t${pad(t.n)}" class="${hit ? "hit" : ""}">
       <td class="c-n">${pad(t.n)}</td>
       <td class="c-tool"><div class="name">${esc(t.name)}</div><div class="what">${esc(t.what)}</div>
@@ -59,8 +64,9 @@
     }
     if (hit && kind !== "all" && hit.kind !== kind) rows = [hit, ...rows];
 
-    const plural = KINDS.find((k) => k.id === kind).plural;
-    $("count").textContent = `${rows.length} ${rows.length === 1 ? plural.replace(/s$/, "") : plural} · newest first`;
+    const cur = KINDS.find((k) => k.id === kind);
+    const plural = cur.plural;
+    $("count").textContent = `${rows.length} ${rows.length === 1 ? cur.one : plural} · newest first`;
 
     $("rows").innerHTML = rows.length
       ? rows.map((t) => rowHtml(t, hit && t.n === hit.n)).join("")
@@ -95,7 +101,7 @@
       return r.json();
     })
     .then((data) => {
-      tools = data.tools;
+      tools = data.tools.filter((t) => t.added <= today);
       console.assert(new Set(tools.map((t) => t.n)).size === tools.length, "tool numbers must be unique");
       $("updated").textContent = `Updated ${data.updated}`;
       render(fromHash());
