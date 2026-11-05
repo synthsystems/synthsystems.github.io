@@ -104,7 +104,9 @@
     .then((data) => {
       tools = data.tools.filter((t) => t.added <= today);
       console.assert(new Set(tools.map((t) => t.n)).size === tools.length, "tool numbers must be unique");
-      $("updated").textContent = `Updated ${data.updated}`;
+      // Entries are added ahead of time, so "updated" = the newest entry visible today, not the file's edit date.
+      const lastAdded = tools.reduce((m, t) => (t.added > m ? t.added : m), data.updated);
+      $("updated").textContent = `Updated ${lastAdded}`;
       render(fromHash());
     })
     .catch(() => {
