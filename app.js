@@ -24,12 +24,13 @@
     return { raw, num, text: num === null ? raw : "" };
   }
 
-  function rowHtml(t, hit) {
+  function rowHtml(t, hit, newest) {
     const k = KINDS.find((x) => x.id === t.kind);
     const kindLabel = k ? k.one.replace(/^./, (c) => c.toUpperCase()) : t.kind;
+    const badge = t.n === newest ? `<span class="new">NEW</span>` : "";
     return `<tr id="t${pad(t.n)}" class="${hit ? "hit" : ""}">
       <td class="c-n">${pad(t.n)}</td>
-      <td class="c-tool"><div class="name">${esc(t.name)}</div><div class="what">${esc(t.what)}</div>
+      <td class="c-tool"><div class="name">${esc(t.name)}${badge}</div><div class="what">${esc(t.what)}</div>
         <div class="meta">${esc(t.job)} · ${esc(kindLabel)} · <span class="nowrap">added ${esc(t.added)}</span></div></td>
       <td class="c-job">${esc(t.job)}</td>
       <td class="c-added">${esc(t.added)}</td>
@@ -69,7 +70,7 @@
     $("count").textContent = `${rows.length} ${rows.length === 1 ? cur.one : plural} · newest first`;
 
     $("rows").innerHTML = rows.length
-      ? rows.map((t) => rowHtml(t, hit && t.n === hit.n)).join("")
+      ? rows.map((t) => rowHtml(t, hit && t.n === hit.n, newest)).join("")
       : `<tr class="empty"><td colspan="5">No ${plural} yet. They show up here as the Shorts go out.</td></tr>`;
 
     if (scrollToHit && hit) $("t" + pad(hit.n))?.scrollIntoView({ block: "center" });
