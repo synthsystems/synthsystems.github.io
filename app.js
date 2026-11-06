@@ -24,17 +24,22 @@
     return { raw, num, text: num === null ? raw : "" };
   }
 
+  // An entry with "aff" (an affiliate link) uses it instead of "url" and is marked as such.
+  const href = (t) => t.aff || t.url;
+  const rel = (t) => (t.aff ? "sponsored noopener" : "noopener");
+
   function rowHtml(t, hit, newest) {
     const k = KINDS.find((x) => x.id === t.kind);
     const kindLabel = k ? k.one.replace(/^./, (c) => c.toUpperCase()) : t.kind;
     const badge = t.n === newest ? `<span class="new">NEW</span>` : "";
+    const aff = t.aff ? ` · <span class="nowrap">affiliate link</span>` : "";
     return `<tr id="t${pad(t.n)}" class="${hit ? "hit" : ""}">
       <td class="c-n">${pad(t.n)}</td>
       <td class="c-tool"><div class="name">${esc(t.name)}${badge}</div><div class="what">${esc(t.what)}</div>
-        <div class="meta">${esc(t.job)} · ${esc(kindLabel)} · <span class="nowrap">added ${esc(t.added)}</span></div></td>
+        <div class="meta">${esc(t.job)} · ${esc(kindLabel)} · <span class="nowrap">added ${esc(t.added)}</span>${aff}</div></td>
       <td class="c-job">${esc(t.job)}</td>
       <td class="c-added">${esc(t.added)}</td>
-      <td class="c-open"><a class="open" href="${esc(t.url)}" rel="noopener" aria-label="Open ${esc(t.name)}">Open ↗</a></td>
+      <td class="c-open"><a class="open" href="${esc(href(t))}" rel="${rel(t)}" aria-label="Open ${esc(t.name)}${t.aff ? " (affiliate link)" : ""}">Open ↗</a></td>
     </tr>`;
   }
 
@@ -55,7 +60,7 @@
     const hit = q.num !== null ? tools.find((t) => t.n === q.num) : null;
     const answer = $("answer");
     if (q.num !== null && hit) {
-      answer.innerHTML = `#${pad(hit.n)} is <strong>${esc(hit.name)}</strong>. <a href="${esc(hit.url)}" rel="noopener">Open ${esc(hit.name)} ↗</a>`;
+      answer.innerHTML = `#${pad(hit.n)} is <strong>${esc(hit.name)}</strong>. <a href="${esc(href(hit))}" rel="${rel(hit)}">Open ${esc(hit.name)} ↗</a>${hit.aff ? " (affiliate link)" : ""}`;
     } else if (q.num !== null) {
       answer.textContent = `There's no #${pad(q.num)} yet. The newest tool is #${pad(newest)}.`;
     } else if (q.text && rows.length === 0) {
@@ -107,6 +112,7 @@
       // Entries are added ahead of time, so "updated" = the newest entry visible today, not the file's edit date.
       const lastAdded = tools.reduce((m, t) => (t.added > m ? t.added : m), data.updated);
       $("updated").textContent = `Updated ${lastAdded}`;
+      $("disclosure").hidden = !tools.some((t) => t.aff);
       render(fromHash());
     })
     .catch(() => {
