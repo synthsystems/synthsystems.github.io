@@ -190,6 +190,46 @@
       "url": "https://github.com/Tencent/BrowserSkill",
       "video": "Your coding agent can use your real browser.",
       "added": "2026-11-17"
+    },
+    {
+      "n": 20,
+      "name": "Paperclip",
+      "kind": "app",
+      "job": "AI agent team",
+      "what": "Free, open-source app that runs a team of AI agents: set a goal, give each agent a role, track work and costs on one dashboard. Works with Claude Code, Codex, Cursor and Gemini CLI. Self-hosted, bring your own agents and keys. MIT.",
+      "url": "https://github.com/paperclipai/paperclip",
+      "video": "Running more than one AI agent? Manage them like a team.",
+      "added": "2026-11-18"
+    },
+    {
+      "n": 21,
+      "name": "FreeToken",
+      "kind": "app",
+      "job": "Local AI models",
+      "what": "Free, open-source engine that runs huge open models like DeepSeek and Qwen on your own PC by splitting the work between your graphics card and memory. Desktop app for Windows and Linux; built for NVIDIA RTX 30 series or newer. Apache-2.0.",
+      "url": "https://github.com/FlashML-org/FreeToken",
+      "video": "Run a giant AI model on your own gaming PC.",
+      "added": "2026-11-19"
+    },
+    {
+      "n": 22,
+      "name": "agent-desktop",
+      "kind": "repo",
+      "job": "Agent computer use",
+      "what": "From Vercel Labs: reads every button and menu in a desktop app as text, so an AI agent can click and type without screenshots. Mac, Windows, Linux. A command-line tool for developers. Apache-2.0.",
+      "url": "https://github.com/vercel-labs/agent-desktop",
+      "video": "Your AI agent can use the apps on your computer.",
+      "added": "2026-11-20"
+    },
+    {
+      "n": 25,
+      "name": "What the $20 plans add",
+      "kind": "news",
+      "job": "Pricing",
+      "what": "ChatGPT Plus: image generation with Thinking, interactive tables and charts, full deep research (Free: limited). Claude Pro: Research and Claude in Chrome (not on Free). From the official pricing pages, Nov 8 2026.",
+      "url": "https://claude.com/pricing",
+      "video": "You pay $20 for AI. Are you using these?",
+      "added": "2026-11-21"
     }
   ]
 }
